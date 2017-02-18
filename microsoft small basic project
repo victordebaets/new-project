@@ -1,0 +1,76 @@
+microsoft small basic project
+TextWindow.foregroundcolor="black"
+TextWindow.BackgroundColor="white"
+TextWindow.Title ="program 001"
+TextWindow.writeline("hello world!")
+TextWindow.WriteLine("first scripting!!")
+
+start:
+TextWindow.Write("pleas enter your name ")
+name = TextWindow.Read()
+TextWindow.writeline("welcome" + name)
+
+password:
+TextWindow.Write("password:")
+password = TextWindow.Read()
+If password = 9946 then
+  TextWindow.WriteLine(password + " is correct")
+  Goto next
+  Else
+  TextWindow.WriteLine(password + " is incorrect")
+  TextWindow.WriteLine("try again? (yes or no)")
+  TextWindow.Write("")
+  again = TextWindow.Read()
+  If(again = "yes" Or "Yes" Or "YES") Then 
+    Goto password
+  Else 
+    Goto start
+EndIf
+
+next:
+
+If(Clock.Hour = 8)Then
+  TextWindow.WriteLine("good morning" + name)
+else
+  TextWindow.WriteLine("good evening/afternoon" + name)
+EndIf
+
+
+EndIf
+
+maps:
+TextWindow.Write("what do you want to open? ")
+openfile = TextWindow.Read()
+If openfile = "private" Then
+  Goto private
+Else 
+  Goto hello
+EndIf
+
+If openfile = "work" Then
+  Goto work
+Else 
+  Goto hello
+EndIf
+
+private:
+TextWindow.WriteLine("wecome in my map")
+Sound.PlayMusic("O5 C8 C8 G8 G8 A8 A8 G4 F8 F8 E8 E8 D8 D8 C4")
+
+
+
+
+work:
+TextWindow.WriteLine("work map is empty")
+
+
+
+
+
+hello:
+TextWindow.WriteLine("the map you wanted to open doesn't exist")
+TextWindow.Writeline("try again? (yes or no)")
+again = TextWindow.Read()
+If(again = "yes" Or "Yes" Or "YES") Then 
+  goto maps
+  EndIf
